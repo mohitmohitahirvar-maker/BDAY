@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Preet 🤍</title>
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Dancing+Script:wght@600;700&family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  height:100vh;
+  background:linear-gradient(180deg,#ffffff,#fde4ec);
+  overflow:hidden;
+}
+
+.slider{
+  height:100vh;
+  width:100%;
+  position:relative;
+}
+
+.slide{
+  height:100vh;
+  width:100%;
+  display:none;
+  padding:32px;
+  text-align:center;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+}
+
+.slide.active{
+  display:flex;
+  animation:fade 1.6s ease;
+}
+
+/* Fonts usage */
+h1{
+  font-family:'Great Vibes', cursive;
+  font-size:3rem;
+  color:#c2185b;
+  margin-bottom:18px;
+}
+
+p{
+  font-family:'Dancing Script', cursive;
+  font-size:1.95rem;
+  color:#444;
+  line-height:1.55;
+}
+
+.soft{
+  font-family:'Playfair Display', serif;
+  font-size:1.8rem;
+  color:#6d4c41;
+}
+
+video{
+  width:130px;
+  position:absolute;
+  bottom:35px;
+  right:20px;
+}
+
+.gallery{
+  display:flex;
+  gap:14px;
+  overflow-x:auto;
+  padding:20px;
+}
+.gallery img{
+  height:260px;
+  border-radius:18px;
+}
+
+.gift{
+  width:170px;
+  animation:bounce 1.5s infinite;
+}
+
+.big-photo{
+  width:90%;
+  max-width:360px;
+  border-radius:22px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.2);
+}
+
+.final p{
+  font-size:2.3rem;
+  color:#ad1457;
+}
+
+@keyframes fade{
+  from{opacity:0;}
+  to{opacity:1;}
+}
+
+@keyframes bounce{
+  0%,100%{transform:translateY(0);}
+  50%{transform:translateY(-14px);}
+}
+</style>
+</head>
+
+<body>
+
+<audio id="bgMusic" src="song.mp3" loop></audio>
+
+<div class="slider">
+
+<!-- FIRST -->
+<div class="slide active">
+  <h1>💖 Happy Birthday my Sweetheart 💖🎂</h1> 
+ 
+
+  <p class="soft">🌸 My Preetygirl 🤍✨</p>
+   <video loop autoplay src="WhatsApp Video 2026-01-13 at 10.12.36 PM.mp4"></video> 
+  
+</div>
+
+<div class="slide">
+  <p>💖 Log kehte hain jannat upar hai, par mujhe toh tumhare saath reh kar hi jannat mil gayi 🤍✨ 🌸</p>
+</div>
+
+<div class="slide">
+  <p>💔 aur mai kitna badnasib tha use kho baitha 🥀✨</p>
+</div>
+
+<div class="slide">
+  <p>🫂 but mai phirse use banane ka pura try karunga ✨🥀 love of my life 💖</p>
+</div>
+
+<div class="slide">
+  <p>📖 Tum meri life ki woh poetry ho, jise main baar-baar padhna chahta hoon 💓</p>
+</div>
+
+<div class="slide">
+  <p class="soft">💌 because kitna bhi padhu, mann kabhi bharta hi nahi 🤍✨</p>
+</div>
+
+<div class="slide">
+  <p>🌍 Duniya ke liye tum ek person ho, par mere liye tum meri poori duniya ho 💖</p>
+</div>
+
+<div class="slide">
+  <p class="soft">🥀 Bas tum khush raho… tumhari khushi mein hi meri asli khushi hai 🫂🤍</p>
+</div>
+
+<!-- I LOVE YOU MESSAGE -->
+<div class="slide">
+  <h1>💖 I Love You So Much 💖</h1>
+  <p class="soft">🌸 You mean the world to me 🤍✨</p>
+</div>
+
+<!-- GALLERY -->
+<div class="slide">
+  <h1>💕 Our Beautiful Memories 💕</h1>
+  <div class="gallery">
+    <img src="IMAGE 6.jpg" alt="cimage ">
+    <img src="IMAGE 5.jpeg" alt="Memory 2">
+    <img src="IMAGE 1.png" alt="Memory 3">
+    <img src="WhatsApp Image 2026-01-13 at 10.09.34 PM.jpeg " alt="Memory 4">
+  </div>
+</div>
+
+<!-- GIFT -->
+<div class="slide">
+  <h1>🎁 Something for You 🎁💝</h1>
+  <img src="IMAGE 4.png" class="gift">
+</div>
+
+<!-- FINAL -->
+<div class="slide final">
+  <img src="Gemini_Generated_Image_cn6vhocn6vhocn6v.png" class="big-photo" alt="Final Photo">
+  <p>💖 You & Me… always 🤍✨</p>
+</div>
+
+</div>
+
+<script>
+let slides=document.querySelectorAll(".slide");
+let index=0;
+let music=document.getElementById("bgMusic");
+
+document.body.addEventListener("click",()=>{ music.play(); },{once:true});
+
+function showSlide(i){
+  slides.forEach(s=>s.classList.remove("active"));
+  slides[i].classList.add("active");
+}
+
+setInterval(()=>{
+  index = (index + 1) % slides.length; // Loop through slides
+  showSlide(index);
+},7000); // ⏱️ increased duration
+</script>
+
+</body>
+</html>
